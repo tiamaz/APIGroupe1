@@ -68,6 +68,12 @@ namespace Projet.API
 
             services.AddAutoMapper(typeof(Startup));
 
+                //services.AddSingleton<IGestionRepository, GestionRepository>();
+
+                //services.AddTransient<IGestionRepository, GestionRepository>();
+
+                services.AddScoped<IGestionRepository, GestionRepository>();
+
             services.AddControllers();
         }
 
